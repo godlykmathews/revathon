@@ -1,0 +1,31 @@
+# Circuit Diagram Instructions
+
+## Pin Connections
+
+### IR Sensors
+- **IR1 (Left-most IR Sensor)**: Connect to analog pin A0
+- **IR2 (Middle-left IR Sensor)**: Connect to analog pin A1
+- **IR3 (Middle-right IR Sensor)**: Connect to analog pin A2
+- **IR4 (Right-most IR Sensor)**: Connect to analog pin A3
+
+### Ultrasonic Sensor
+- **TRIG**: Connect to digital pin 9
+- **ECHO**: Connect to digital pin 10
+
+### Motors
+- **Left Motor Forward**: Connect to digital pin 3
+- **Left Motor Backward**: Connect to digital pin 5
+- **Right Motor Forward**: Connect to digital pin 6
+- **Right Motor Backward**: Connect to digital pin 11
+
+### Servo Motor
+- **Gripper Servo**: Connect to digital pin 7
+
+## Ultrasonic Sensor Explanation
+The ultrasonic sensor uses the `TRIG` and `ECHO` pins to measure distance. The `TRIG` pin sends out a pulse, and the `ECHO` pin receives the reflected pulse. The time taken for the pulse to return is used to calculate the distance to an object.
+
+## Servo Motor and Gripper Mechanism
+The servo motor is connected to the gripper mechanism. It controls the opening and closing of the gripper to pick up and place objects. The servo is initially set to 90 degrees (open position) and moves to 0 degrees to close the gripper.
+
+## Robot Functionality
+The robot follows a specific path using IR sensors. It detects objects using the ultrasonic sensor and picks them up with the gripper mechanism. The robot then moves to a designated box and places the object there. The path and robot structure are illustrated in the images `path.jpg`, `gripper.jpg`, and `robot.jpg` in the repository.
